@@ -12,21 +12,29 @@ export default function Navigation() {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-slate-900/90 backdrop-blur-md border-b border-purple-500/20"
+      className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-purple-500/20"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <Link href="/" className="text-2xl font-bold text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-200px h-200px">
+        <div className="flex justify-between items-center h-2">
+          <Link href="/" className="text-2xl text-white">
             <motion.span
               whileHover={{ scale: 1.05 }}
-              className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
+              className=" bg-white bg-clip-text text-transparent"
             >
-              Cadence
+              Track your day understand your rhythm
+            </motion.span>
+          </Link>
+          <Link href="/" className="text-2xl text-white">
+            <motion.span
+              whileHover={{ scale: 1.05 }}
+              className=" bg-white bg-clip-text text-transparent"
+            >
+              Cadence helps you see where yout time really goes one simple tap at a time.
             </motion.span>
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8">
+          {/* <div className="hidden md:flex space-x-8">
             {['Home', 'Features', 'About', 'Blog', 'Contact'].map((item) => (
               <Link key={item} href={item === 'Home' ? '/' : `/#${item.toLowerCase()}`}>
                 <motion.span
@@ -37,7 +45,7 @@ export default function Navigation() {
                 </motion.span>
               </Link>
             ))}
-          </div>
+          </div> */}
 
           {/* Mobile Menu Button */}
           <button

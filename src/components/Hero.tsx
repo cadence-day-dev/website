@@ -1,8 +1,9 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FaRocket, FaArrowRight } from 'react-icons/fa';
+import { FaArrowRight } from 'react-icons/fa';
 import { useState } from 'react';
+import Clock from './Clock';
 
 // Generate background elements outside component to avoid re-generation
 const generateBackgroundElements = () =>
@@ -53,13 +54,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <motion.div
-            className="inline-block mb-4"
-            animate={{ rotate: [0, 360] }}
-            transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
-          >
-            <FaRocket className="text-6xl text-purple-400" />
-          </motion.div>
+          <Clock />
 
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
             <motion.span
@@ -84,9 +79,9 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
-            className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto"
+            className="text-lg md:text-xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed"
           >
-            Transform your business with cutting-edge technology solutions, innovative approaches, and expert consulting services.
+            Track your day understand your rhythm — Cadence helps you see where your time really goes one simple tap at a time.
           </motion.p>
 
           <motion.div
