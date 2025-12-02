@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
+import ActivitySelector from './ActivitySelector';
 
 export default function Home() {
   const [currentTime, setCurrentTime] = useState(new Date());
@@ -54,7 +55,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-[#191919] flex flex-col">
+    <div className="h-screen overflow-hidden bg-[#191919] flex flex-col">
       {/* Top text section */}
       <div className="flex items-start pt-6 pb-0">
         {/* Left text */}
@@ -219,6 +220,9 @@ export default function Home() {
         </motion.div>
       </div>
 
+
+      {/* Activity Selector */}
+      <ActivitySelector />
 
       {/* Bottom right CADENCE logo */}
       <div className="absolute bottom-8 right-8">
