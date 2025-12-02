@@ -57,17 +57,20 @@ export default function Home() {
   return (
     <div className="h-screen overflow-hidden bg-[#191919] flex flex-col">
       {/* Top text section */}
-      <div className="flex items-start pt-6 pb-0">
+      <div className="flex pt-6 pb-0 px-8">
         {/* Left text */}
         <motion.div
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="pl-8"
+          className="flex justify-start flex-1"
         >
-          <h1 className="text-2xl font-light text-white">
+          <h3 className="
+            text-[10px] md:text-lg font-light text-white text-left 
+            p-2 w-full
+          ">
             Track your day,<br />understand your rhythm.
-          </h1>
+          </h3>
         </motion.div>
 
         {/* Center text */}
@@ -75,14 +78,18 @@ export default function Home() {
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="flex-1 flex items-center justify-center"
+          className="flex items-center justify-center flex-1"
         >
           <div className="flex items-center">
-            <div className="h-px bg-[#333333] w-60"></div>
-            <p className="text-xs text-gray-400 tracking-widest uppercase mx-4">
+            <div className="h-px bg-[#333333] lg:w-20 md:w-10 sm:w-5"></div>
+            <p className="
+              text-xs sm:text-sm md:text-xs lg:text-sm text-gray-400 
+              tracking-widest text-center uppercase mx-4
+              p-2
+            ">
               LOG YOUR ACTIVITIES
             </p>
-            <div className="h-px bg-[#333333] w-60"></div>
+            <div className="h-px bg-[#333333] lg:w-20 md:w-10 sm:w-5"></div>
           </div>
         </motion.div>
 
@@ -91,10 +98,13 @@ export default function Home() {
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="pr-8"
+          className="flex justify-end flex-1"
         >
-          <h3 className="text-2xl font-light text-white text-left">
-            Cadence helps you see<br />where your time really goes,<br />one simple tap at a time.
+          <h3 className="
+            text-[10px] md:text-lg font-light text-white text-right
+            p-2 w-full
+          ">
+            Cadence helps you see where your time really goes, <br/> one tap at a time.
           </h3>
         </motion.div>
       </div>
