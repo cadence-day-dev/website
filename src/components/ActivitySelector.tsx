@@ -45,9 +45,9 @@ export default function ActivitySelector() {
         stiffness: 200,
         damping: 30
       }}
-      className="fixed bottom-24 left-1/2 transform -translate-x-1/2 z-20"
+      className="fixed bottom-16 left-1/2 transform -translate-x-1/2 z-20"
     >
-      <div className="flex items-center space-x-8 bg-gray-800/80 backdrop-blur-sm rounded-full px-8 py-4 border border-gray-600">
+      <div className="flex items-center space-x-8 ">
         {activities.map((activity, index) => (
           <motion.div
             key={activity.name}
