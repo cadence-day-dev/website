@@ -66,10 +66,10 @@ export default function Home() {
           className="flex justify-start flex-1"
         >
           <h3 className="
-            text-[10px] md:text-lg font-light text-white text-left 
+            text-[12px] md:text-lg font-light text-white text-left 
             p-2 w-full
           ">
-            Track your day,<br />understand your rhythm.
+            Track your day, and understand your rhythm.
           </h3>
         </motion.div>
 
@@ -101,10 +101,10 @@ export default function Home() {
           className="flex justify-end flex-1"
         >
           <h3 className="
-            text-[10px] md:text-lg font-light text-white text-right
+            text-[12px] md:text-lg font-light text-white text-right
             p-2 w-full
           ">
-            Cadence helps you see where your time really goes, <br/> one tap at a time.
+            Cadence helps you see where your time goes.
           </h3>
         </motion.div>
       </div>
