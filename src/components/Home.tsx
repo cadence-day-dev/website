@@ -184,7 +184,7 @@ export default function Home() {
       {/* Center Column - Clock */}
       <div className="absolute inset-0 flex items-center justify-center">
         {/* Gradient glow background */}
-        <div className="absolute w-100 h-100 md:w-80 md:h-80 lg:w-[540px] lg:h-[540px] rounded-full" 
+        <div className="absolute w-64 h-64 md:w-80 md:h-80 lg:w-[540px] lg:h-[540px] rounded-full" 
              style={{
                background: 'radial-gradient(circle, rgba(96, 64, 195, 1) 0%, transparent 70%)'
              }}>
@@ -194,7 +194,7 @@ export default function Home() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="relative w-96 h-96 z-10"
+          className="relative w-80 h-80 lg:w-96 lg:h-96 z-10"
         >
 
           {/* Outer ring with minute segments */}
@@ -202,7 +202,7 @@ export default function Home() {
             {minuteSegments.map((segment, i) => (
               <div
                 key={i}
-                className="absolute w-1 h-8 origin-bottom"
+                className="absolute w-0.5 h-6 lg:w-1 lg:h-8 origin-bottom"
                 style={{
                   left: '50%',
                   bottom: '50%',
@@ -219,11 +219,11 @@ export default function Home() {
           </div>
 
           {/* Main clock circle */}
-          <div className="absolute inset-8 rounded-full bg-[#282828] border border-gray-600">
+          <div className="absolute inset-6 lg:inset-8 rounded-full bg-[#282828] border border-gray-600">
             {/* Half-hour rectangular segments around the dial */}
             {Array.from({ length: 24 }, (_, i) => {
               const angle = i * 15 - 90; // 24 segments of 15 degrees each
-              const radius = 172; // Distance from center
+              const radius = isMobile ? 138 : 172; // Distance from center (20% smaller on mobile)
               const segmentWidth = isMobile ? 20 : 25;
               const segmentHeight = isMobile ? 43 : 40;
               
@@ -249,11 +249,11 @@ export default function Home() {
               <div key={i}>
                 {/* Hour number */}
                 <div
-                  className="absolute text-gray-300 text-sm font-light"
+                  className="absolute text-gray-300 text-xs lg:text-sm font-light"
                   style={{
                     left: '50%',
                     top: '50%',
-                    transform: `translate(-50%, -50%) translate(${Math.cos((marker.angle + 90) * Math.PI / 180) * 130}px, ${Math.sin((marker.angle + 90) * Math.PI / 180) * 130}px)`,
+                    transform: `translate(-50%, -50%) translate(${Math.cos((marker.angle + 90) * Math.PI / 180) * (isMobile ? 104 : 130)}px, ${Math.sin((marker.angle + 90) * Math.PI / 180) * (isMobile ? 104 : 130)}px)`,
                   }}
                 >
                   {marker.number.toString().padStart(2, '0')}
@@ -271,7 +271,7 @@ export default function Home() {
                   style={{
                     left: '50%',
                     top: '50%',
-                    transform: `translate(-50%, -50%) translate(${Math.cos((angle + 90) * Math.PI / 180) * 130}px, ${Math.sin((angle + 90) * Math.PI / 180) * 130}px)`,
+                    transform: `translate(-50%, -50%) translate(${Math.cos((angle + 90) * Math.PI / 180) * (isMobile ? 104 : 130)}px, ${Math.sin((angle + 90) * Math.PI / 180) * (isMobile ? 104 : 130)}px)`,
                   }}
                 />
               );
@@ -280,7 +280,7 @@ export default function Home() {
             {/* Clock hands */}
             {/* Hour hand */}
             <motion.div
-              className="absolute w-1 h-16 bg-white rounded-full origin-bottom"
+              className="absolute w-1 h-12 lg:h-16 bg-white rounded-full origin-bottom"
               style={{
                 left: '50%',
                 bottom: '50%',
@@ -297,7 +297,7 @@ export default function Home() {
             
             {/* Minute hand */}
             <motion.div
-              className="absolute w-0.5 h-24 bg-white rounded-full origin-bottom"
+              className="absolute w-0.5 h-20 lg:h-24 bg-white rounded-full origin-bottom"
               style={{
                 left: '50%',
                 bottom: '50%',
