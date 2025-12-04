@@ -199,7 +199,7 @@ export default function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1 }}
-          className="text-4xl font-light text-white"
+          className="text-2xl lg:text-4xl font-light text-white"
         >
           CADENCE
         </motion.h6>

@@ -18,7 +18,6 @@ export default function Footer() {
               </span>
             </h3>
             <p className="text-gray-400">
-              Transforming businesses through innovative technology solutions.
             </p>
           </div>
 

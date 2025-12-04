@@ -51,7 +51,7 @@ export default function Header() {
           text-[12px] md:text-lg font-light text-white text-right
           p-2 w-full
         ">
-          Cadence helps you see where your time goes.
+          Cadence helps you see where time goes.
         </h3>
       </motion.div>
     </div>
