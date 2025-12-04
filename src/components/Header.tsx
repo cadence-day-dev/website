@@ -30,8 +30,8 @@ export default function Header() {
         <div className="flex items-center">
           <div className="h-px bg-[#333333] lg:w-40 md:w-20 sm:w-5"></div>
           <p className="
-            text-[8px] sm:text-xxs md:text-xs lg:text-xs text-white 
-            tracking-widest text-center uppercase mx-4
+            text-[8px] sm:text-xxs md:text-xxs lg:text-xxs 
+            tracking-widest text-center uppercase mx-4 text-gray-300
             
           ">
             LOG YOUR ACTIVITIES
