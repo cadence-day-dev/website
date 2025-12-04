@@ -101,7 +101,7 @@ export default function Home() {
 
 
   return (
-    <div className="h-screen overflow-hidden bg-[#191919] flex flex-col">
+    <div className="h-screen overflow-hidden bg-[#191919] flex flex-col fixed inset-0">
       <Header />
       
       <ClockDisplay 
