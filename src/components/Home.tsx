@@ -123,7 +123,7 @@ export default function Home() {
       />
 
       {/* Bottom left social links */}
-      <div className="absolute bottom-4 left-8 lg:bottom-8">
+      <div className="absolute bottom-16 left-4 lg:bottom-8 lg:left-8">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -181,7 +181,7 @@ export default function Home() {
       </div>
 
       {/* Bottom right CADENCE logo */}
-      <div className="absolute bottom-4 right-8 lg:bottom-8">
+      <div className="absolute bottom-16 right-4 lg:bottom-8 lg:right-8">
         <motion.h6
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
